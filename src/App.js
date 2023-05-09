@@ -6,11 +6,9 @@ import {
   Text,
   useColorModeValue,
   VStack,
-  Button
 } from '@chakra-ui/react';
 import Form from './components/Form'
 import React from 'react';
-import html2canvas from 'html2canvas';
 
 function onSubmit(memberName, memberNumber, memberSince, validUntil, mvp) {
   document.getElementById('name').innerHTML = memberName
