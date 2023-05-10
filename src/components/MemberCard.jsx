@@ -49,10 +49,10 @@ function MemberCard() {
         id="contact">
         <Box
           borderRadius="lg"
-          m={{ base: 5, md: 16, lg: 10 }}
-          p={{ base: 5, lg: 16 }}>
+          m={{ base: 5, md: 5, lg: 5 }}
+          p={{ base: 5, lg: 5 }}>
           <Box>
-            <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+            <VStack spacing={{ base: 5, md: 5, lg: 5 }}>
               <Heading
                 fontSize={{
                   base: '4xl',
@@ -61,7 +61,8 @@ function MemberCard() {
                 Alaska Card Generator
               </Heading>
               <Stack
-                spacing={{ base: 4, md: 8, lg: 20 }}
+                mrt="10px"
+                spacing={{ base: 5, md: 5, lg: 5 }}
                 direction={{ base: 'column', md: 'row' }}>
                 <Form onSubmit={onSubmit}></Form>
                 <Box id="capture">
@@ -77,9 +78,9 @@ function MemberCard() {
                     justify="start"
                     direction={{ base: 'row', md: 'column' }}>
                       <Stack
-                        paddingLeft="38.5px"
-                        mt="306px"
-                        mb="5.6px"
+                        paddingLeft="37.5px"
+                        mt="306.5px"
+                        mb="5px"
                         h="auto"
                         w="360px">
                         <Text
@@ -87,7 +88,7 @@ function MemberCard() {
                           className='memberName'
                           textAlign="start"
                           color='#00426F'
-                          fontSize='18.7px'
+                          fontSize='18.8px'
                           fontFamily="AS Circular"
                           fontWeight={500}
                           lineHeight="18px"
@@ -97,17 +98,16 @@ function MemberCard() {
                         </Text>
                       </Stack>
                       <Stack
-                        paddingLeft="38px"
+                        paddingLeft="37.6px"
                         w="380px">
                         <Text
                           id='memberNumber'
                           className='memberNumber'
                           color='#00426F'
                           h="100%"
-                          fontSize="36px"
+                          fontSize="37.5px"
                           fontFamily="AS Circular"
                           fontWeight={500}
-                          letterSpacing="1px"
                           lineHeight="36px"
                           >
                           2542770970
@@ -132,8 +132,8 @@ function MemberCard() {
                       </Stack>
                       <Stack
                         w="380px"
-                        paddingTop="3px"
-                        paddingLeft="116px">
+                        paddingTop="2.8px"
+                        paddingLeft="116.5px">
                         <Text
                           id='validUntil'
                           className='validUntil'
@@ -141,8 +141,8 @@ function MemberCard() {
                           h="100%"
                           fontSize="17px"
                           fontFamily="AS Circular"
-                          fontWeight={300}
-                          letterSpacing="-0.2px"
+                          // fontWeight={300}
+                          // letterSpacing="0.05px"
                           lineHeight="18px"
                           >
                           12/31/2023
