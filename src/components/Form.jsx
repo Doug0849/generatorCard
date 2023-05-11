@@ -17,6 +17,7 @@ function Form({ onSubmit }) {
 	const [validUntil, setValidUntil] = useState('');
 	const [mvp, setMvp] = useState('');
 
+
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		onSubmit(name, number, memberSince, validUntil, mvp);

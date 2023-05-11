@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { Box, Flex, Heading, Stack, Text, useColorModeValue, VStack, Button } from '@chakra-ui/react';
 import Form from './Form';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 function onSubmit(memberName, memberNumber, memberSince, validUntil, mvp) {
   document.getElementById('name').innerHTML = memberName;
@@ -30,17 +30,15 @@ function onSubmit(memberName, memberNumber, memberSince, validUntil, mvp) {
 }
 
 function MemberCard({ updateMemberInfo }) {
-  // const [memberName, setMemberName] = useState('');
-  // const [memberNumber, setMemberNumber] = useState('');
-  // const memberNameText = document.getElementById('name');
-  // const memberNumberText = document.getElementById('memberNumber');
+	const memberName = useRef('')
+	const memberNumber = useRef('')
 
-  // const handleSubmit = (event) => {
-	// 	event.preventDefault();
-  //   setMemberName(memberNameText.innerText)
-  //   setMemberNumber(memberNumberText.innerText)
-	// 	updateMemberInfo(memberName, memberNumber);
-	// };
+	const getMemberInfo = (event) => {
+		event.preventDefault();
+		memberName.current = document.getElementById('name').innerHTML;
+		memberNumber.current = document.getElementById('memberNumber').innerHTML;
+		updateMemberInfo(memberName, memberNumber)
+	}
 
 	return (
 		<Flex
@@ -94,6 +92,7 @@ function MemberCard({ updateMemberInfo }) {
 											fontWeight={500}
 											lineHeight='18px'
 											// letterSpacing="-0.6px"
+											reft={memberName}
 										>
 											Archan Rajnikant Patel
 										</Text>
@@ -108,6 +107,7 @@ function MemberCard({ updateMemberInfo }) {
 											fontFamily='AS Circular'
 											fontWeight={500}
 											lineHeight='36px'
+											ref={memberNumber}
 										>
 											2542770970
 										</Text>
@@ -157,12 +157,18 @@ function MemberCard({ updateMemberInfo }) {
 									</Stack>
 								</VStack>
 							</Box>
-							{/* <Button
+							<Button
                   mt="5px"
-                  onClick={handleSubmit}
+									colorScheme='blue'
+									bg='blue.400'
+									color='white'
+									_hover={{
+										bg: 'blue.500',
+									}}
+                  onClick={getMemberInfo}
                 >
-                  點我擷取區塊
-                </Button> */}
+                  點我換置網頁會員名稱及會員號碼
+                </Button>
 						</Stack>
 					</VStack>
 				</Box>

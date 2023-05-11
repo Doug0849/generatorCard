@@ -5822,10 +5822,9 @@ const alaskaAirlinesPage_2_rawHtml =
 
 											<div id=FormUserControl__mileagePlanAccountDetail__mileagePlanInfo style=clear:left>
 
-												<strong style=display:inline-block;margin-bottom:10px>Member name:</strong>&nbsp;Pongsakon
-												Kananusorn MVP Gold 75K<br>
+												<strong style=display:inline-block;margin-bottom:10px>Member name:</strong>&nbsp; James Shao MVP<br>
 												<strong style=display:inline-block;margin-bottom:10px>Mileage Plan
-													number:</strong>&nbsp;289953834
+													number:</strong>&nbsp;259190315
 												<br>
 												<strong>Available miles:</strong>&nbsp;0
 											</div>

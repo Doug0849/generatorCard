@@ -5987,10 +5987,8 @@ const alaskaAirlinesPage_1_rawHtml =
 
 											<div id=FormUserControl__mileagePlanAccountDetail__mileagePlanInfo style=clear:left>
 
-												<strong style=display:inline-block;margin-bottom:10px>Member name:</strong>&nbsp;<span id=mvpName>James Shao
-												MVP</span><br>
-												<strong style=display:inline-block;margin-bottom:10px>Mileage Plan
-													number:</strong>&nbsp;259190315
+												<strong style=display:inline-block;margin-bottom:10px>Member name:</strong>&nbsp;<span id=mvpName>&nbsp;James Shao MVP</span><br>
+												<strong style=display:inline-block;margin-bottom:10px>Mileage Plan number:</strong>&nbsp;259190315
 												<br>
 												<strong>Available miles:</strong>&nbsp;0
 											</div>
