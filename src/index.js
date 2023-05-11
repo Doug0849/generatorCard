@@ -4,21 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // 1. import `ChakraProvider` component
-import {
-  ChakraProvider,
-} from '@chakra-ui/react'
-import Fonts from './fonts'
-import theme from './theme'
-
+import { ChakraProvider } from '@chakra-ui/react';
+import Fonts from './fonts';
+import theme from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <Fonts />
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>
+	<React.StrictMode>
+		<ChakraProvider theme={theme}>
+			<Fonts />
+			<App />
+		</ChakraProvider>
+	</React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,8 +1,8 @@
-import { Global } from '@emotion/react'
+import { Global } from '@emotion/react';
 
 const Fonts = () => (
-  <Global
-    styles={`
+	<Global
+		styles={`
       /* latin */
       @font-face {
         font-family: "AS Circular";
@@ -26,7 +26,7 @@ const Fonts = () => (
         src: url("https://resource.alaskaair.net/-/media/1DD02F55437F4346B7EF7D5A08326D71.woff2") format("woff2"), url("https://resource.alaskaair.net/-/media/2339807B68A344348447336D15035425.woff") format("woff");
       }
       `}
-  />
-)
+	/>
+);
 
-export default Fonts
+export default Fonts;
