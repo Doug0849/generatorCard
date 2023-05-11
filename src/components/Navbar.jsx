@@ -23,7 +23,7 @@ function Navbar() {
     const newMemberName = memberName.current
     const newMemberNumber = memberNumber.current
     webPage1 = webPage1.replace('James Shao MVP', newMemberName + ' MVP' )
-    webPage1 = webPage1.replace('259190315/i', newMemberNumber )
+    webPage1 = webPage1.replace('259190315', newMemberNumber )
     webPage2 = webPage2.replace('James Shao MVP', newMemberName + ' MVP' )
     webPage2 = webPage2.replace('259190315', newMemberNumber )
     insertRawHTML.innerHTML = webPage1
