@@ -92,7 +92,7 @@ function MemberCard({ updateMemberInfo }) {
 											fontWeight={500}
 											lineHeight='18px'
 											// letterSpacing="-0.6px"
-											reft={memberName}
+											ref={memberName}
 										>
 											Archan Rajnikant Patel
 										</Text>

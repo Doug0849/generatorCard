@@ -25,6 +25,36 @@ const Fonts = () => (
         font-display: fallback;
         src: url("https://resource.alaskaair.net/-/media/1DD02F55437F4346B7EF7D5A08326D71.woff2") format("woff2"), url("https://resource.alaskaair.net/-/media/2339807B68A344348447336D15035425.woff") format("woff");
       }
+
+      @font-face {
+        font-family: "Segoe UI";
+        src: url("./fonts/SEGOEUI.ttf") format("TTF");
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') format("TTF");
+      }
+
+      @font-face {
+        font-family: "LufthansaHeadWeb-Thin";
+        src: url('./fonts/LufthansaHeadWeb-Thin.woff2') format("woff2");
+      }
+
+      @font-face {
+        font-family: "LufthansaHeadWeb-Light";
+        src: url('./fonts/LufthansaHeadWeb-Light.woff2') format("woff2");
+      }
+
+      @font-face {
+        font-family: "LufthansaHeadWeb-Bold";
+        src: url('./fonts/LufthansaHeadWeb-Bold.woff2') format("woff2");
+      }
+
+      @font-face {
+        font-family: "LufthansaTextWeb-Bold";
+        src: url('./fonts/LufthansaTextWeb-Bold.woff2') format("woff2");
+      }
       `}
 	/>
 );

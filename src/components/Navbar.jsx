@@ -1,8 +1,9 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import MemberCard from './MemberCard';
+import MemberCard2 from './MemberCard2';
 import alaskaAirlinesPage_2_rawHtml from './alaskaAirlinesPage_2_rawHtml';
 import alaskaAirlinesPage_1_rawHtml from './alaskaAirlinesPage_1_rawHtml';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect } from 'react';
 
 let webPage1 = alaskaAirlinesPage_1_rawHtml
 let webPage2 = alaskaAirlinesPage_2_rawHtml
@@ -33,9 +34,10 @@ function Navbar() {
 	return (
 		<Tabs>
 			<TabList>
-				<Tab>Generator Card</Tab>
+				<Tab>Alaska Card</Tab>
         <Tab>Alaska Web Site Page 1</Tab>
         <Tab>Alaska Web Site Page 2</Tab>
+        <Tab>Hansa Card</Tab>
 			</TabList>
 
 			<TabPanels>
@@ -45,6 +47,9 @@ function Navbar() {
 				<TabPanel className="insertRawHTML">
 				</TabPanel>
 				<TabPanel className="insertRawHTML2">
+				</TabPanel>
+        <TabPanel padding='0'>
+					<MemberCard2 />
 				</TabPanel>
 			</TabPanels>
 		</Tabs>
