@@ -70,7 +70,7 @@ function MemberCard2() {
 									id='hansaBg'
 									w='390px'
 									h='669px'
-									bgImage="url('/images/hansa_german_card.png')"
+									bgImage="url('/images/hansa_english_card.png')"
 									bgSize='cover'
 									bgPosition='center'
 									bgRepeat='no-repeat'
