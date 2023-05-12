@@ -15,18 +15,14 @@ import React, { useState } from 'react';
 function Form({ onSubmit }) {
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
-	const [number1, setNumber1] = useState('');
-	const [number2, setNumber2] = useState('');
-	const [number3, setNumber3] = useState('');
-	const [number4, setNumber4] = useState('');
+	const [number, setNumber] = useState('');
 	const [validUntil, setValidUntil] = useState('');
 	const [language, setLanguage] = useState('1');
 
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(typeof language)
-		onSubmit(language, firstName, lastName, number1, number2, number3, number4, validUntil);
+		onSubmit(language, firstName, lastName, number, validUntil);
 	};
 
 	return (
@@ -59,26 +55,8 @@ function Form({ onSubmit }) {
 					</FormControl>
 					<FormControl>
 						<FormLabel>
-							Number1:
-							<Input type='text' value={number1} onChange={(e) => setNumber1(e.target.value)} />
-						</FormLabel>
-					</FormControl>
-					<FormControl>
-						<FormLabel>
-							Number2:
-							<Input type='text' value={number2} onChange={(e) => setNumber2(e.target.value)} />
-						</FormLabel>
-					</FormControl>
-					<FormControl>
-						<FormLabel>
-							Number3:
-							<Input type='text' value={number3} onChange={(e) => setNumber3(e.target.value)} />
-						</FormLabel>
-					</FormControl>
-					<FormControl>
-						<FormLabel>
-							Number4:
-							<Input type='text' value={number4} onChange={(e) => setNumber4(e.target.value)} />
+							Number:
+							<Input type='text' value={number} onChange={(e) => setNumber(e.target.value)} />
 						</FormLabel>
 					</FormControl>
 					<FormControl>

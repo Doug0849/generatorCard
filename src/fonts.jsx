@@ -32,8 +32,8 @@ const Fonts = () => (
       }
 
       @font-face {
-        font-family: "Roboto";
-        src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') format("TTF");
+        font-family: "Roboto-Regular";", sans-serif;;
+        src: url('./fonts/Roboto-Regular.ttf') format("TTF");
       }
 
       @font-face {
@@ -54,6 +54,16 @@ const Fonts = () => (
       @font-face {
         font-family: "LufthansaTextWeb-Bold";
         src: url('./fonts/LufthansaTextWeb-Bold.woff2') format("woff2");
+      }
+
+      @font-face {
+        font-family: "LUFTHANSATEXTWEB-REGULAR";
+        src: url('./fonts/LUFTHANSATEXTWEB-REGULAR.TTF') format("TTF");
+      }
+
+      @font-face {
+        font-family: "LufthansaTextWeb-Light";
+        src: url('https://www.lufthansa.com/sk/en/homepage/etc/designs/dcep/clientlib-all/fonts/LufthansaTextWeb-Light.woff2') format("woff2");
       }
       `}
 	/>

@@ -4,13 +4,10 @@ import Form2 from './Form2';
 import ReactDOM from 'react-dom/client';
 import {QRCodeCanvas} from 'qrcode.react';
 
-function onSubmit(language, firstName, lastName, number1, number2, number3, number4, validUntil) {
+function onSubmit(language, firstName, lastName, number, validUntil) {
   document.getElementById('firstName').innerText = firstName;
 	document.getElementById('lastName').innerText = lastName;
-	document.getElementById('memberNumber1').innerText = number1;
-	document.getElementById('memberNumber2').innerText = number2;
-	document.getElementById('memberNumber3').innerText = number3;
-	document.getElementById('memberNumber4').innerText = number4;
+	document.getElementById('number').innerText = number;
 	document.getElementById('validThru').innerText = validUntil;
   const hansaBg = document.getElementById('hansaBg');
   if (language === '1') {
@@ -20,7 +17,7 @@ function onSubmit(language, firstName, lastName, number1, number2, number3, numb
   }
 
 	// QRCord generation
-	let qrcodeValue = `FFPC001LH${number1}${number2}${number3}${number4}`
+	let qrcodeValue = `FFPC001LH${number}`
 	let lastNameSpace = '00000000000000000000'
 	lastNameSpace = lastNameSpace.substring(lastName.length , lastNameSpace.length)
 	lastNameSpace = `${lastName}${lastNameSpace}`
@@ -70,7 +67,7 @@ function MemberCard2() {
 									id='hansaBg'
 									w='390px'
 									h='669px'
-									bgImage="url('/images/hansa_english_card.png')"
+									bgImage="url('/images/hasatest.png')"
 									bgSize='cover'
 									bgPosition='center'
 									bgRepeat='no-repeat'
@@ -78,115 +75,60 @@ function MemberCard2() {
 									justify='start'
 									direction={{ base: 'row', md: 'column' }}
 								>
-									<Stack paddingLeft='55.8px' mt='112.2px' h='auto' w='390px'>
+									<Flex ml='58px' mt='112px' h='auto' w='390px' direction="column" justify="flex-start"  align="flex-start">
 										<Text
 											id='firstName'
 											className='memberName'
 											textAlign='start'
 											mb='-8px'
 											color='#fbfbfb'
-											pl='0.1px'
 											fontSize='24px'
-											fontFamily='Roboto'
+											fontFamily='Roboto-Regular'
 											fontWeight="500"
 											lineHeight='30.3px'
-											letterSpacing="0.55px"
-											transform='scaleX(1)'
+											transform='scaleX(1.038)'
 										>
 											MATTHIAS
 										</Text>
 										<Text
 											id='lastName'
 											className='memberName'
+											ml="-2.2px"
+											mt="8px"
 											textAlign='start'
 											color='#fbfbfb'
-											pl='0.1px'
 											fontSize='24px'
-											fontFamily='Roboto'
+											fontFamily='Roboto-Regular'
 											fontWeight="500"
 											lineHeight='30.3px'
-											letterSpacing="0.55px"
 											transform='scaleX(1)'>
 											CABA
 										</Text>
-									</Stack>
-									<Flex pl='52.4px' pt="46px" w='390px'
+									</Flex>
+									<Flex pt="46px" w='390px'
 									justify="space-between">
-										<HStack>
-										<span
-											id='memberNumber1'
-											className='memberNumber'
-											style={{
-												wordSpacing: '1.3px',
-												color:'#fbfbfb',
-												h:'100%',
-												fontSize:'18px',
-												fontFamily:'LufthansaHeadWeb-Thin',
-												lineHeight:'36px',
-												letterSpacing:'0.5px',
-												transform:'scaleX(0.845) scaleY(0.93)',
-											}}
-										>
-											3330 
-										</span>
-										<span
-											id='memberNumber2'
-											className='memberNumber'
-											style={{
-												marginLeft: '-2.1px',
-												wordSpacing: '1.3px',
-												color:'#fbfbfb',
-												h:'100%',
-												fontSize:'18px',
-												fontFamily:'LufthansaHeadWeb-Thin',
-												lineHeight:'36px',
-												letterSpacing:'0.85px',
-												transform:'scaleX(0.845) scaleY(0.93)',
-											}}
-										>
-											3187
-										</span>
-										<span
-											id='memberNumber3'
-											className='memberNumber'
-											style={{
-												marginLeft: '-2.1px',
-												wordSpacing: '1.3px',
-												color:'#fbfbfb',
-												h:'100%',
-												fontSize:'18px',
-												fontFamily:'LufthansaHeadWeb-Thin',
-												lineHeight:'36px',
-												letterSpacing:'0.6px',
-												transform:'scaleX(0.845) scaleY(0.93)',
-											}}
-										>
-											7843
-										</span>
-										<span
-											id='memberNumber4'
-											className='memberNumber'
-											style={{
-												marginLeft: '-2.1px',
-												wordSpacing: '1.3px',
-												color:'#fbfbfb',
-												h:'100%',
-												fontSize:'18px',
-												fontFamily:'LufthansaHeadWeb-Thin',
-												lineHeight:'36px',
-												letterSpacing:'1px',
-												transform:'scaleX(0.845) scaleY(0.93)',
-											}}
-										>
-											962
-										</span>
+										<HStack ml="56px">
+											<span
+												id='number'
+												className='memberNumber'
+												style={{
+													wordSpacing: '1.3px',
+													color:'#fbfbfb',
+													h:'100%',
+													fontSize:'16.6px',
+													fontFamily:'LufthansaTextWeb-Light',
+													lineHeight:'36px',
+												}}
+											>
+												3330 3187 7843 962
+											</span>
 										</HStack>
 										<Stack justify="end">
 											<span
 												id='validThru'
 												className='validThru'
 												style={{
-													marginRight: '50.3px',
+													marginRight: '49px',
 													color:'#fbfbfb',
 													h:'100%',
 													fontSize:'18px',

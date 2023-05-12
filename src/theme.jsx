@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
 	fonts: {
-		heading: `'AlaskaAir',AS Circular, 'Segoe UI`,
+		heading: `'AlaskaAir',AS Circular, ', Segoe UI,`,
 		body: `'AlaskaAir','AS Circular', 'Segoe UI`,
 	},
 	fontWeights: {
