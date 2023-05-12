@@ -7,7 +7,7 @@ import {QRCodeCanvas} from 'qrcode.react';
 function onSubmit(language, firstName, lastName, number, validUntil) {
   document.getElementById('firstName').innerText = firstName;
 	document.getElementById('lastName').innerText = lastName;
-	document.getElementById('number').innerText = number;
+	document.getElementById('memberNumber1').innerText = number;
 	document.getElementById('validThru').innerText = validUntil;
   const hansaBg = document.getElementById('hansaBg');
   if (language === '1') {
@@ -17,7 +17,7 @@ function onSubmit(language, firstName, lastName, number, validUntil) {
   }
 
 	// QRCord generation
-	let qrcodeValue = `FFPC001LH${number}`
+	let qrcodeValue = `FFPC001LH${number.replaceAll(' ','')}`
 	let lastNameSpace = '00000000000000000000'
 	lastNameSpace = lastNameSpace.substring(lastName.length , lastNameSpace.length)
 	lastNameSpace = `${lastName}${lastNameSpace}`
@@ -75,16 +75,16 @@ function MemberCard2() {
 									justify='start'
 									direction={{ base: 'row', md: 'column' }}
 								>
-									<Flex ml='58px' mt='112px' h='auto' w='390px' direction="column" justify="flex-start"  align="flex-start">
+									<Stack mt='112px' h='60.6px' w='390px' justify="flex-start">
 										<Text
 											id='firstName'
 											className='memberName'
 											textAlign='start'
+											ml="62px"
 											mb='-8px'
 											color='#fbfbfb'
 											fontSize='24px'
-											fontFamily='Roboto-Regular'
-											fontWeight="500"
+											fontFamily='Roboto'
 											lineHeight='30.3px'
 											transform='scaleX(1.038)'
 										>
@@ -93,46 +93,47 @@ function MemberCard2() {
 										<Text
 											id='lastName'
 											className='memberName'
-											ml="-2.2px"
-											mt="8px"
 											textAlign='start'
 											color='#fbfbfb'
+											mt="58px"
+											pl="56px"
 											fontSize='24px'
 											fontFamily='Roboto-Regular'
-											fontWeight="500"
 											lineHeight='30.3px'
 											transform='scaleX(1)'>
 											CABA
 										</Text>
-									</Flex>
-									<Flex pt="46px" w='390px'
+									</Stack>
+									<Flex pl='47px' pt="46px" w='390px'
 									justify="space-between">
-										<HStack ml="56px">
-											<span
-												id='number'
-												className='memberNumber'
-												style={{
-													wordSpacing: '1.3px',
-													color:'#fbfbfb',
-													h:'100%',
-													fontSize:'16.6px',
-													fontFamily:'LufthansaTextWeb-Light',
-													lineHeight:'36px',
-												}}
-											>
-												3330 3187 7843 962
-											</span>
+										<HStack>
+										<span
+											id='memberNumber1'
+											className='memberNumber'
+											style={{
+												wordSpacing:'-1px',
+												color:'#fbfbfb',
+												h:'100%',
+												fontSize:'17px',
+												fontFamily:'LufthansaHeadWeb-Light',
+												lineHeight:'36px',
+												letterSpacing:'0.75px',
+												transform:'scaleX(0.9)'
+											}}
+										>
+											3330 3187 7843 962
+										</span>
 										</HStack>
 										<Stack justify="end">
 											<span
 												id='validThru'
 												className='validThru'
 												style={{
-													marginRight: '49px',
+													marginRight: '50.3px',
 													color:'#fbfbfb',
 													h:'100%',
 													fontSize:'18px',
-													fontFamily:'LufthansaHeadWeb-Thin',
+													fontFamily:'LufthansaHeadWeb-Light',
 													lineHeight:'36px',
 													letterSpacing:'0.6px',
 													transform:'scaleX(0.845) scaleY(0.93)',

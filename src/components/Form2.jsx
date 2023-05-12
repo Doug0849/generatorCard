@@ -22,6 +22,7 @@ function Form({ onSubmit }) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		console.log(typeof language)
 		onSubmit(language, firstName, lastName, number, validUntil);
 	};
 
